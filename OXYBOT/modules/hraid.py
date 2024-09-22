@@ -34,11 +34,11 @@ async def raid(e):
 
         try:
             if uid in OXYGEN:
-                await e.reply("REPO OWNER HAI YE.")
+                await e.reply("BETA BAAP PE RAID NHI KRTE HAI...")
             elif uid == OWNER_ID:
                 await e.reply("BETA BAAP PE RAID NHI KRTE HAI...")
             elif uid in SUDO_USERS:
-                await e.reply("ISPE RAID MAT MARO.. !!...")
+                await e.reply("**MERA BACCHA HAI RAID MAT MARO.. !!...**")
             else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
@@ -49,6 +49,6 @@ async def raid(e):
                     await e.client.send_message(e.chat_id, caption)
                     await asyncio.sleep(0.1)
         except (IndexError, ValueError, NameError) as exc:  # Catch specific exceptions
-            await e.reply(f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐇𝐑𝐚𝐢𝐝\n  » {hl}hraid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}raid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+            await e.reply(f"𝐇𝐑𝐚𝐢𝐝\n  » {hl}hraid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}raid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
         except Exception as exc:  # Catch all other exceptions
             print(exc)  # Print the exception for debugging. Fix error in this code this bot not able to work properly fix all errors
