@@ -36,11 +36,11 @@ async def raid(e):
 
         try:
             if uid in OXYGEN:
-                await e.reply("REPO OWNER HAI YE.")
+                await e.reply("ʙᴇᴛᴀ ʙᴀᴀᴘ ᴘᴇ ʀᴀɪᴅ ɴʜɪ ᴋᴀʀᴛᴇ")
             elif uid == OWNER_ID:
-                await e.reply("BETA BAAP PE RAID NHI KRTE HAI...")
+                await e.reply("ʙᴇᴛᴀ ʙᴀᴀᴘ ᴘᴇ ʀᴀɪᴅ ɴʜɪ ᴋᴀʀᴛᴇ...")
             elif uid in SUDO_USERS:
-                await e.reply("ISPE RAID MAT MARO.. !!...")
+                await e.reply("ᴍᴇʀᴀ ʙᴀᴄᴄʜᴀ ʜᴀɪ ʀᴀɪᴅ ᴍᴀᴛ ᴋᴀʀ.. !!...")
             else:
                 first_name = entity.first_name
                 counter = int(xraid[1])
@@ -51,7 +51,7 @@ async def raid(e):
                     await e.client.send_message(e.chat_id, caption)
                     await asyncio.sleep(0.1)
         except (IndexError, ValueError, NameError):
-            await e.reply(f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐑𝐚𝐢𝐝\n  » {hl}raid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}raid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+            await e.reply(f"ʀᴀɪᴅ\n  » {hl}raid <ᴄᴏᴜɴᴛ> <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}raid <ᴄᴏᴜɴᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
         except Exception as e:
             print(e)
 
@@ -101,19 +101,19 @@ async def rraid(e):
         try:
             user_id = entity.id
             if user_id in OXYGEN:
-                await e.reply("REPO OWNER HAI YE.")
+                await e.reply("ʙᴇᴛᴀ ʙᴀᴀᴘ ᴘᴇ ʀᴀɪᴅ ɴʜɪ ᴋᴀʀᴛᴇ.")
             elif user_id == OWNER_ID:
-                await e.reply("BETA BAAP PE RAID NHI KRTE HAI....")
+                await e.reply("ʙᴇᴛᴀ ʙᴀᴀᴘ ᴘᴇ ʀᴀɪᴅ ɴʜɪ ᴋᴀʀᴛᴇ....")
             elif user_id in SUDO_USERS:
-                await e.reply("= ISPE RAID MAT MARO.. !!...")
+                await e.reply("= ᴍᴇʀᴀ ʙᴀᴄᴄʜᴀ ʜᴀɪ ʀᴀɪᴅ ᴍᴀᴛ ᴋᴀʀ.. !!...")
             else:
                 global REPLY_RAID
                 check = f"{user_id}_{e.chat_id}"
                 if check not in REPLY_RAID:
                     REPLY_RAID.append(check)
-                await e.reply("» LAG GYA REPLY RAID.. !! ✅")
+                await e.reply("» ɪꜱᴋɪ ᴍᴀᴀ ᴄʜᴜᴅᴇɢɪ 🔜.. !!")
         except NameError:
-            await e.reply(f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝\n  » {hl}rraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}rraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+            await e.reply(f"ʀᴇᴘʟʏʀᴀɪᴅ\n  » {hl}rraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}rraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
@@ -141,6 +141,6 @@ async def drraid(e):
             global REPLY_RAID
             if check in REPLY_RAID:
                 REPLY_RAID.remove(check)
-            await e.reply("» HAT GYA REPLY RAID !! ✅")
+            await e.reply("» ʙᴀʜᴜᴛ ᴄʜᴏᴅ ᴅɪʏᴀ...")
         except NameError:
-            await e.reply(f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐃𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝\n  » {hl}drraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}drraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+            await e.reply(f" ᴅʀᴇᴘʟʏʀᴀɪᴅ\n  » {hl}drraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}drraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
