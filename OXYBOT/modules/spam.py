@@ -1,4 +1,4 @@
-# © @oxegn
+# © @cenzeo
 import asyncio
 
 from OXYBOT.data import GROUP, PORMS
@@ -59,10 +59,10 @@ async def spam(event: events):
                     await event.client.send_message(event.chat_id, message)
                     await asyncio.sleep(0.2)
             else:
-                await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 ™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 🥵 <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
+                await event.reply(f" **Usage:**\n  » {hl}spam 13 » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13  <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
 
         except (IndexError, ValueError):
-            await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 ™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 😎 <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
+            await event.reply(f" **Usage:**\n  » {hl}spam 13  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13  <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
         except Exception as e:
             print(e)
 
@@ -80,7 +80,7 @@ async def spam(event: events):
 async def pspam(event):
     if event.sender_id in SUDO_USERS:
         if event.chat_id in GROUP:
-            await event.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍 ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
+            await event.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴄᴇɴᴢᴏ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
             try:
                 counter = int(event.text.split(" ", 2)[1])
@@ -90,7 +90,7 @@ async def pspam(event):
                     await gifspam(event, alt) 
                     await asyncio.sleep(0.2)
             except (IndexError, ValueError):
-                await event.reply(f"🔞 **Usage:**  {hl}pspam 13")
+                await event.reply(f" **Usage:**  {hl}pspam 13")
             except Exception as e:
                 print(e)
 
@@ -108,7 +108,7 @@ async def pspam(event):
 async def hang(e):
     if e.sender_id in SUDO_USERS:
         if e.chat_id in GROUP:
-            await e.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍 ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
+            await e.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ᴄᴇɴᴢᴏ ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
             try:
                 counter = int(e.text.split(" ", 2)[1])
@@ -117,6 +117,6 @@ async def hang(e):
                     await e.respond(hang)
                     await asyncio.sleep(0.3)
             except (IndexError, ValueError):
-                await e.reply(f"😈 **Usage:** {hl}hang 10")
+                await e.reply(f"**Usage:** {hl}hang 10")
             except Exception as e:
                 print(e)
