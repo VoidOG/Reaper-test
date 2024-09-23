@@ -1,12 +1,12 @@
 import asyncio
 import psutil
 from datetime import datetime
-from config import X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
+from config import X1, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
+from telethon import events  
 
 LOG_GROUP_ID = -1002183841044  # Log group ID for bot logs
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%slogs(?: |$)(.*)" % hl))
-# ... (Other client event handlers)
 async def logs(legend):
     if legend.sender_id == OWNER_ID:
         start = datetime.now()
@@ -26,7 +26,6 @@ async def logs(legend):
         # Fetching bot statistics
         total_chats = len(await X1.get_dialogs())
         total_users = len(SUDO_USERS)  # Assuming all SUDO_USERS are unique
-        # You may need to fetch total users dynamically depending on your implementation
 
         log_content = "🔧 **Bot & VPS Status** 🔧\n\n"
         log_content += f"🕒 **Bot Uptime:** `{hours}h {minutes}m {seconds}s`\n"
