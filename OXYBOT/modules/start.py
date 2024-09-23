@@ -29,7 +29,7 @@ async def start(event):
         AltBot = await event.client.get_me()
         bot_name = AltBot.first_name
         bot_id = AltBot.id
-        TEXT = f"**ʜᴇʏ [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\nɪ ᴀᴍ [{bot_name}](tg://user?id={bot_id})**\n"
+        TEXT = f"**ʜᴇʏ [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ [{bot_name}](tg://user?id={bot_id}) , ᴛʜᴇ ᴜʟᴛɪᴍᴀᴛᴇ ᴡᴇᴀᴘᴏɴ ꜰᴏʀ ᴄʜᴀᴏs ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ! ᴀs ᴛʜᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀꜰᴜʟ sᴘᴀᴍ ʙᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ, ʀᴇᴀᴘᴇʀ ᴄᴀɴ ᴜɴʟᴇᴀsʜ ʀᴇʟᴇɴᴛʟᴇss ᴡᴀᴠᴇs ᴏf ᴍᴇssᴀɢᴇs ᴀɴᴅ ʟᴀᴜɴᴄʜ ʀᴀɪᴅs ᴏɴ ᴜsᴇʀs ᴡɪᴛʜ ᴘʀᴇᴄɪsɪᴏɴ. ᴅᴇsɪɢɴᴇᴅ ꜰᴏʀ ᴛʜᴏsᴇ ᴡʜᴏ ᴅᴀʀᴇ ᴛᴏ ᴘᴜsʜ ʙᴏᴜɴᴅᴀʀɪᴇs, ᴛʜɪs ʙᴏᴛ ᴏғғᴇʀs ᴜɴᴘᴀʀᴀʟʟᴇʟᴇᴅ ᴄᴀᴘᴀʙɪʟɪᴛɪᴇs ꜰᴏʀ sᴘᴀᴍᴍɪɴɢ ᴀɴᴅ ᴜsᴇʀ ᴇɴɢᴀɢᴇᴍᴇɴᴛ. ᴇᴍʙʀᴀᴄᴇ ᴛʜᴇ ᴘᴏᴡᴇʀ ᴏf ʀᴇᴀᴘᴇʀ ᴀɴᴅ ᴛᴀᴋᴇ ᴄᴏɴᴛʀᴏʟ ᴏf ᴛʜᴇ ᴅɪɢɪᴛᴀʟ ʙᴀᴛᴛʟᴇfɪᴇʟᴅ!**\n"
         await event.client.send_file(
             event.chat_id,
             "https://telegra.ph/file/60abdd0dac472c43a2e0b.jpg",
