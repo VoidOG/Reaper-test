@@ -27,17 +27,17 @@ async def logs(legend):
         total_chats = len(await X1.get_dialogs())
         total_users = len(SUDO_USERS)  # Assuming all SUDO_USERS are unique
 
-        log_content = "🔧 **Bot & VPS Status** 🔧\n\n"
-        log_content += f"🕒 **Bot Uptime:** `{hours}h {minutes}m {seconds}s`\n"
-        log_content += f"💻 **CPU Usage:** `{cpu_usage}%`\n"
-        log_content += f"🧠 **Memory Usage:** `{memory_info.percent}%`\n"
-        log_content += f"📦 **Disk Usage:** `{disk_usage.percent}%`\n"
-        log_content += f"💬 **Number of Chats:** `{total_chats}`\n"
-        log_content += f"👥 **Number of Users Using the Bot:** `{total_users}`\n"
-        log_content += f"🔑 **Number of SUDO Users:** `{len(SUDO_USERS)}`\n\n"
+        log_content = "● **Bot & VPS Status** 🔧\n\n"
+        log_content += f"● **Bot Uptime:** `{hours}h {minutes}m {seconds}s`\n"
+        log_content += f"● **CPU Usage:** `{cpu_usage}%`\n"
+        log_content += f"● **Memory Usage:** `{memory_info.percent}%`\n"
+        log_content += f"● **Disk Usage:** `{disk_usage.percent}%`\n"
+        log_content += f"● **Number of Chats:** `{total_chats}`\n"
+        log_content += f"● **Number of Users Using the Bot:** `{total_users}`\n"
+        log_content += f"● **Number of SUDO Users:** `{len(SUDO_USERS)}`\n\n"
 
         # Add current timestamp
-        log_content += f"🗓️ **Timestamp:** `{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}`\n\n"
+        log_content += f"● **Timestamp:** `{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}`\n\n"
 
         # Adding SUDO Users with profile links
         log_content += "**🔹 SUDO Users:**\n"
