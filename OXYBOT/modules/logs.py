@@ -2,7 +2,7 @@ import asyncio
 import psutil
 from datetime import datetime
 from config import X1, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
-from telethon import events  
+from telethon import events
 
 LOG_GROUP_ID = -1002183841044  # Log group ID for bot logs
 
@@ -23,21 +23,19 @@ async def logs(legend):
         hours, remainder = divmod(uptime_seconds, 3600)
         minutes, seconds = divmod(remainder, 60)
 
-        # Fetching bot statistics
-        total_chats = len(await X1.get_dialogs())
-        total_users = len(SUDO_USERS)  # Assuming all SUDO_USERS are unique
+        # Get number of SUDO Users
+        total_users = len(SUDO_USERS)
 
-        log_content = "● **Bot & VPS Status** 🔧\n\n"
-        log_content += f"● **Bot Uptime:** `{hours}h {minutes}m {seconds}s`\n"
-        log_content += f"● **CPU Usage:** `{cpu_usage}%`\n"
-        log_content += f"● **Memory Usage:** `{memory_info.percent}%`\n"
-        log_content += f"● **Disk Usage:** `{disk_usage.percent}%`\n"
-        log_content += f"● **Number of Chats:** `{total_chats}`\n"
-        log_content += f"● **Number of Users Using the Bot:** `{total_users}`\n"
-        log_content += f"● **Number of SUDO Users:** `{len(SUDO_USERS)}`\n\n"
+        log_content = "🔧 **Bot & VPS Status** 🔧\n\n"
+        log_content += f"🕒 **Bot Uptime:** `{hours}h {minutes}m {seconds}s`\n"
+        log_content += f"💻 **CPU Usage:** `{cpu_usage}%`\n"
+        log_content += f"🧠 **Memory Usage:** `{memory_info.percent}%`\n"
+        log_content += f"📦 **Disk Usage:** `{disk_usage.percent}%`\n"
+        log_content += f"👥 **Number of Users Using the Bot:** `{total_users}`\n"
+        log_content += f"🔑 **Number of SUDO Users:** `{total_users}`\n\n"
 
         # Add current timestamp
-        log_content += f"● **Timestamp:** `{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}`\n\n"
+        log_content += f"🗓️ **Timestamp:** `{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}`\n\n"
 
         # Adding SUDO Users with profile links
         log_content += "**🔹 SUDO Users:**\n"
